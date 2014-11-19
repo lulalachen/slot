@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>第八第九屆大傳社社員抽籤</title>
+
+		<meta name="description" content="Slot for member of HSNUMC">
+		<meta name="author" content="Lulalachen">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+
+		<script src="js/jquery-1.11.1.js"></script>
+
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section>
+						<h2>附中大傳社第八第九屆社員抽籤系統</h2>
+						<p>By Lulalachen</p>
+					</section>
+				</section>
+				<section>
+
+					<!-- Video Tests -->
+					<section>
+						<video width= auto; height=auto; z-index= 100; id='v1'>
+							<source src='lib/【TEDx】羅根·拉普蘭特：用駭客思維學習 Logan LaPlante- Hackschoo.mp4' type='video/mp4'></source>
+						</video>
+
+						<script>
+							var myVideo = document.getElementById('v1');
+						
+							$(myVideo).click(function(){
+								if( myVideo.paused ){
+									myVideo.webkitRequestFullscreen();
+									myVideo.play();
+								}else{
+									myVideo.pause();
+								}
+							})
+
+							$(myVideo).hover(function(){
+								myVideo.setAttribute('controls','controls');
+							},function(){
+								myVideo.removeAttribute('controls');
+							});
+						</script>
+					</section>
+					<!-- Video Tests -->
+
+
+					<!-- Grade 11 Below -->
+					<section>
+						<img src="lib/photo/1.jpg" class="original" id="1">
+						<img src="lib/photo/2.jpg" class="original" id="2">
+						<img src="lib/photo/3.jpg" class="original" id="3">
+						<img src="lib/photo/4.jpg" class="original" id="4">
+						<img src="lib/photo/5.jpg" class="original" id="5">
+						<img src="lib/photo/6.jpg" class="original" id="6">
+						<img src="lib/photo/7.jpg" class="original" id="7"><br>
+						<img src="lib/photo/8.jpg" class="original" id="8">
+						<img src="lib/photo/9.jpg" class="original" id="9">
+						<img src="lib/photo/10.jpg" class="original" id="10">
+						<img src="lib/photo/logo.png" alt="" class="original" id="chosen">
+						<img src="lib/photo/11.jpg" class="original" id="11">
+						<img src="lib/photo/12.jpg" class="original" id="12">
+						<img src="lib/photo/13.jpg" class="original" id="13"><br>
+						<img src="lib/photo/14.jpg" class="original" id="14">
+						<img src="lib/photo/15.jpg" class="original" id="15">
+						<img src="lib/photo/16.jpg" class="original" id="16">
+						<img src="lib/photo/17.jpg" class="original" id="17">
+						<img src="lib/photo/18.jpg" class="original" id="18">
+						<img src="lib/photo/19.jpg" class="original" id="19">
+						<img src="lib/photo/20.jpg" class="original" id="20">	
+						<br>
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+								<button id="start1" class='btn btn-success'>START</button>
+								<button id="stop1" class='btn btn-danger'>STOP</button>				
+								<button id="reset1" class='btn btn-default'>RESET</button>	
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<h3 text-align='left'>高一社員</h3>
+							</div>
+						</div>
+						<script>
+							$(document).ready(function(){
+								$("#chosen").click(function(){
+									
+								});			
+								toggle = false;
+								t = 1
+								$("#start1").click(function(){
+
+									$("#chosen").addClass('zoom-in');
+									if(toggle===false){
+										loop = setInterval(function(){
+											var x = Math.floor((Math.random()*100)%20+1);
+											$("#chosen").attr("src","lib/photo/"+x+".jpg");
+											if(t===1){
+												for(i=1;i<8;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t++;
+											}else if (t===2){
+												for(i=8;i<14;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t++;
+											}else{
+												for(i=14;i<21;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t=1;
+											}
+
+										},100);		
+
+										toggle = true;
+									}
+								})
+								$("#stop1").click(function(){
+									if (toggle){
+										clearInterval(loop);
+							  			$("#chosen").addClass('zoom-in');
+							  			toggle = false;
+							  		}
+							  	}).hover(function(){
+							  		$("#chosen").addClass('zoom-in');
+
+							  	},function(){
+							  		$("#chosen").removeClass('zoom-in');
+							  	});
+
+							  	$("#reset1").click(function(){
+							  		for (i=1;i<21;i++){
+							  			document.getElementById(i).src = "lib/photo/"+i+".jpg";
+							  		}
+							  		$("#chosen").attr('src','lib/photo/logo.png');
+							  		t=1;
+							  		$("#chosen").addClass('zoom-in');
+							  	})
+ 						  	    $('#reset1').hover(function() {
+								
+								}, function() {
+						    	    $('#chosen').removeClass('zoom-in');
+							    });		
+
+							    $('img.original').hover(function() {
+							        $('#chosen').addClass('zoom-in'); 
+							    }, function() {
+						    	    $('#chosen').removeClass('zoom-in');
+							    });		
+						    });				  	
+						 
+
+						</script>
+						<style>
+							.original {
+							    width: 120px;
+							    height: 120px;
+							    -webkit-transition: all 5s ease-in-out;
+							    -moz-transition: all .5s ease-in-out;
+							    -o-transition: all .5s ease-in-out;
+							    -ms-transition: all .5s ease-in-out;
+							}
+							 
+							.zoom-in {
+							    -webkit-transform: scale(2); 
+							    -moz-transform: scale(2);
+							    -o-transform: scale(2);
+							    transform: scale(2);
+							}
+						</style>						
+
+					</section>
+					<!-- Grade 11 Above -->
+
+
+					<!-- Grade 10 Below -->
+					<section>
+						<aside class="notes">
+					        Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					    </aside>
+						<img src="lib/photo/1.jpg" class="zoom-js" id="1">
+						<img src="lib/photo/2.jpg" class="zoom-js" id="2">
+						<img src="lib/photo/3.jpg" class="zoom-js" id="3">
+						<img src="lib/photo/4.jpg" class="zoom-js" id="4">
+						<img src="lib/photo/5.jpg" class="zoom-js" id="5">
+						<img src="lib/photo/6.jpg" class="zoom-js" id="6">
+						<img src="lib/photo/7.jpg" class="zoom-js" id="7"><br>
+						<img src="lib/photo/8.jpg" class="zoom-js" id="8">
+						<img src="lib/photo/9.jpg" class="zoom-js" id="9">
+						<img src="lib/photo/10.jpg" class="zoom-js" id="10">
+						<img src="lib/photo/logo.png" alt="" class="zoom-js" id="chosen2">
+						<img src="lib/photo/11.jpg" class="zoom-js" id="11">
+						<img src="lib/photo/12.jpg" class="zoom-js" id="12">
+						<img src="lib/photo/13.jpg" class="zoom-js" id="13"><br>
+						<img src="lib/photo/14.jpg" class="zoom-js" id="14">
+						<img src="lib/photo/15.jpg" class="zoom-js" id="15">
+						<img src="lib/photo/16.jpg" class="zoom-js" id="16">
+						<img src="lib/photo/17.jpg" class="zoom-js" id="17">
+						<img src="lib/photo/18.jpg" class="zoom-js" id="18">
+						<img src="lib/photo/19.jpg" class="zoom-js" id="19">
+						<img src="lib/photo/20.jpg" class="zoom-js" id="20">	
+						<br>
+						<div class="row">
+							<div class="col-xs-12 col-md-8">
+								<button id="start" class='btn btn-success'>START</button>
+								<button id="stop" class='btn btn-danger'>STOP</button>				
+								<button id="reset" class='btn btn-default'>RESET</button>	
+							</div>
+							<div class="col-xs-6 col-md-4">
+								<h3 text-align='left'>高一社員</h3>
+							</div>
+						</div>
+						<script>
+							$(document).ready(function(){
+								$("#chosen2").click(function(){
+									
+								});			
+								toggle = false;
+								t = 1
+								$("#start").click(function(){
+
+									$("#chosen2").addClass('zoom-in');
+									if(toggle===false){
+										loop = setInterval(function(){
+											var x = Math.floor((Math.random()*100)%20+1);
+											$("#chosen2").attr("src","lib/photo/"+x+".jpg");
+											if(t===1){
+												for(i=1;i<8;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t++;
+											}else if (t===2){
+												for(i=8;i<14;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t++;
+											}else{
+												for(i=14;i<21;i++)
+													document.getElementById(i).src = "lib/photo/"+x+".jpg";
+												t=1;
+											}
+
+										},100);		
+
+										toggle = true;
+									}
+								})
+								$("#stop").click(function(){
+									if (toggle){
+										clearInterval(loop);
+							  			$("#chosen2").addClass('zoom-in');
+							  			toggle = false;
+							  		}
+							  	}).hover(function(){
+							  		$("#chosen2").addClass('zoom-in');
+
+							  	},function(){
+							  		$("#chosen2").removeClass('zoom-in');
+							  	});
+
+							  	$("#reset").click(function(){
+							  		for (i=1;i<21;i++){
+							  			document.getElementById(i).src = "lib/photo/"+i+".jpg";
+							  		}
+							  		$("#chosen2").attr('src','lib/photo/logo.png');
+							  		t=1;
+							  		$("#chosen2").addClass('zoom-in');
+							  	})
+ 						  	    $('#reset').hover(function() {
+								
+								}, function() {
+						    	    $('#chosen2').removeClass('zoom-in');
+							    });		
+
+							    $('img.zoom-js').hover(function() {
+							        $('#chosen2').addClass('zoom-in'); 
+							    }, function() {
+						    	    $('#chosen2').removeClass('zoom-in');
+							    });		
+						    });				  	
+						 
+
+						</script>
+						<style>
+							.zoom-js {
+							    width: 120px;
+							    height: 120px;
+							    -webkit-transition: all 5s ease-in-out;
+							    -moz-transition: all .5s ease-in-out;
+							    -o-transition: all .5s ease-in-out;
+							    -ms-transition: all .5s ease-in-out;
+							}
+							 
+							.zoom-in {
+							    -webkit-transform: scale(2); 
+							    -moz-transform: scale(2);
+							    -o-transform: scale(2);
+							    transform: scale(2);
+							}
+							.resizable(@direction: both) {
+							  // Options: horizontal, vertical, both
+							  resize: @direction;
+							  // Safari fix
+							  overflow: auto;
+							}
+						</style>
+
+					</section>
+					<!-- Grade 10 Above -->
+					
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
