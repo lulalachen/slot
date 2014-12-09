@@ -1,5 +1,5 @@
 # Slot Machine embedded in slides powerd by reveal.js
-Slides based photo slot machine ( helpeing class interactions )
+Slides based photo slot machine ( increase class interactions )
 
 
 --------
