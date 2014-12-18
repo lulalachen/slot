@@ -21,15 +21,18 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
 
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+		
 
 		<script src="js/jquery-1.11.1.js"></script>
 
@@ -63,7 +66,9 @@
 					</section>
 				</section>
 				<section>
-
+					<section>
+						<iframe src="https://docs.google.com/forms/d/1ziBfGtbbuC1mMSyrsv8q9UmIiaHoomueAMocRy7rYpI/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+					</section>
 					<!-- Video Tests -->
 					<section>
 						<video width= auto; height=auto; z-index= 100; id='v1'>
@@ -349,7 +354,31 @@
 
 					</section>
 					<!-- Grade 10 Above -->
-					
+
+
+					<section>
+					<div id='map'></div>
+
+
+						<style>
+							#map { 
+								height: 720px; 
+								width: 1080px;
+							}
+						</style>
+						<script>
+							var map = L.map('map').setView([51.505, -0.09], 13);
+
+							// add an OpenStreetMap tile layer
+							L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+							    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+							}).addTo(map);
+
+							// add a marker in the given location, attach some popup content to it and open the popup
+				
+						</script>
+					</section>
+
 				</section>
 
 			</div>
@@ -358,6 +387,7 @@
 
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
 
 		<script>
 
